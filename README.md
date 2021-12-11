@@ -23,7 +23,7 @@ AMiner是一个学术信息检索网站，对标谷歌学术和arXiv。提供“
 # 我的工作
 我负责关键词推荐场景的推荐系统：包含算法及工程开发两个方面。
 
-推荐系统示意图如下图所示。（该图片较大共12.5M，感兴趣可下载图片到本地放大查看，放大后画质无损）
+推荐系统示意图如下图所示。（该图片较大共12.5M，感兴趣可下载图片到本地放大查看，分辨率保存时设置的较高，即放大后画质无损）
 ![image](https://github.com/huaizepeng2020/Aminer-recommender-system-with-keywords/blob/main/figure/Aminer_keywords_RS_2021.12.11_wrapper.jpg)
 
 # 算法
