@@ -91,7 +91,8 @@ score_final=LR(score1,score2,score3)-score4 <br />
 1召回和传统推荐系统不同，没有考虑交互数据。由业务场景决定的。
 
 # 结果
-在线点击率从初期3-6%逐渐上升至6-9%再到10%+。<br />
+在线点击率从初期5%逐渐上升至5-8%再到6-13%+。<br />
+![image](https://github.com/huaizepeng2020/Aminer-recommender-system-with-keywords/blob/main/figure/CTR_0.png)
 几个重要的时间节点：<br />
 1召回改为现在的算法<br />
 2使用了word2vec+attention的架构<br />
