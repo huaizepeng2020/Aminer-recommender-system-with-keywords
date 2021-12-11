@@ -72,10 +72,11 @@ score_final=LR(score1,score2,score3)-score4 <br />
 注：lightGCN和DIN在阿里云A100服务器上每天训练一次，训练后的数据(包含word2vec词表，e_cf，DIN网络参数及e_din)传输到生产环境，以供在线服务API启动时预加载。
 
 ## 工程开发
-分为四个方面：数据、API、时间&存储开销、高并发场景。<br />
+分为四个方面：数据、服务器、API、时间&存储开销、高并发场景。<br />
 ### 数据
 1搭建了主从SSDB。特征工程中数据全部存入SSDB和Redis，并且能存成KV的都存成了KV。<br />
-2搭建阿里云A100服务器和生产环境的vpn和数据传输通道。<br />
+### 服务器
+1搭建阿里云A100服务器和生产环境的vpn和数据传输通道。<br />
 ### API
 1暴露给架构的最外层API1是基于surpervisord启的，底层是Django。<br />
 2排序中的DIN打分是基于torchserve起的API2。
