@@ -23,6 +23,9 @@ AMiner是一个学术信息检索网站，对标谷歌学术和arXiv。提供“
 # 我的工作
 我负责关键词推荐场景的推荐系统：包含算法及工程开发两个方面。
 
+推荐系统示意图如下图所示。
+![image](https://github.com/huaizepeng2020/Aminer-recommender-system-with-keywords/blob/main/figure/introduction1.png)
+
 # 算法
 一个完整的推荐系统包含“特征工程→召回→排序”三个基本组成，Aminer关键词场景的推荐系统也不例外。
 
