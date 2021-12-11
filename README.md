@@ -12,7 +12,11 @@ AMiner是一个学术信息检索网站，对标谷歌学术和arXiv。提供“
 
 ![image](https://github.com/huaizepeng2020/Aminer-recommender-system-with-keywords/blob/main/figure/introduction1.png)
 
-综合推荐是根据用户的历史记录来推荐内容。关键词推荐是：用户输入学术关键词(如knowledge graph/contrastive Learning)→返回这个方向的paper、科技资讯、topic(目前支持三类“商品”)
+综合推荐是用户只需点击一次，就根据其历史记录来推荐内容。
+
+关键词推荐场景是：
+用户输入学术关键词(如knowledge graph/contrastive Learning)  
+→返回这个方向中用户可能感兴趣的paper、科技资讯、topic(目前支持三类“商品”)
 
 原来代码有两处错误：
 
