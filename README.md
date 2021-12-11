@@ -1,10 +1,9 @@
-# 简介
+# Aminer关键词场景推荐系统
 作者：槐泽鹏
 
-内容：《模式识别和机器学习-博士课程》的第一次大作业——《参数法和非参数法分类器》
-
-# 参考
-参考：https://github.com/pamela0530/bayes
+# 产品介绍
+首页地址：https://www.aminer.cn/
+AMiner是一个学术信息检索网站，对标谷歌学术和arXiv。首页(https://www.aminer.cn/)最上方是一个搜索框，下面是推荐模块。推荐包含两个场景：综合推荐和关键词推荐(区别:是否输入关键词)。综合推荐是根据用户的历史记录来推荐内容。关键词推荐是：用户输入学术关键词(如knowledge graph/contrastive Learning)→返回这个方向的paper、科技资讯、topic(目前支持三类“商品”)
 
 原来代码有两处错误：
 
