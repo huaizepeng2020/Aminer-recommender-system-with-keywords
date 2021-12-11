@@ -53,15 +53,18 @@ score_final=LR(score1,score2,score3)-score4 <br />
 具体如下：<br />
 
 1 基于兴趣的打分(CF-based score1)<br />
-采用lightGCN训练user&item embedding_cf(简称e_cf)。在线服务时直接对user和target item作点积，并归一化到0-1范围内。<br />
+采用**lightGCN**训练user&item embedding_cf(简称e_cf)。在线服务时直接对user和target item作点积，并归一化到0-1范围内。<br />
+
 2 基于内容的打分(content-based score2)<br />
-采用*word2vec+attention*的框架。<br />
+采用**word2vec+attention**的框架。<br />
 上述提到，word2vec把每篇文章编码了多个e_nlp，<br />
 以e_c为query，对target item的多个e_nlp根据向量内积+softmax得到权重，再加权求和得到e_nlp_t。<br />
 然后将e_c和e_nlp_t作点积，并归一化到0-1范围内。<br />
+
 3 基于用户序列的打分(behavior-based score3)<br />
-采用DIN训练神经网络参数及user&item embedding_din(简称e_din)。在线服务时输入用户和商品特征在线排序。<br />
-4 impression discount打分(score4)<br />
+采用**DIN**训练神经网络参数及user&item embedding_din(简称e_din)。在线服务时输入用户和商品特征在线排序。<br />
+
+4 **impression discount**打分(score4)<br />
 对于曝光过的paper，我们期望不要再曝光，要降低此类商品打分。<br />
 根据埋点日志实时将(user,paper)的曝光次数存入redis，<br />
 在线服务的时候先从redis取出user和target item的曝光次数，再乘以一个系数，最后归一化到0-1范围内。<br />
@@ -77,7 +80,7 @@ score_final=LR(score1,score2,score3)-score4 <br />
 1暴露给架构的最外层API1是基于surpervisord启的，底层是Django。<br />
 2排序中的DIN打分是基于torchserve起的API2。
 ### 时间&存储开销
-1 从请求到来到返回推荐结果(API1)开销在150ms以下。其中主要花费时间项：局部敏感哈希的近邻搜索~50ms/DIN排序50~120ms/有道翻译40ms<br />
+1 从请求到来到返回推荐结果(API1)开销在150ms以下。其中主要花费时间项：局部敏感哈希的近邻搜索约50ms/DIN排序50约120ms/有道翻译40ms<br />
 2 surpervisord起了3个线程，每个占9.5g，总共占生产环境22%的内存。
 ### 高并发场景
 1为提高高并发能力，采用了异步召回和多线程多协程的逻辑。<br />
