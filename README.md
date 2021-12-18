@@ -105,7 +105,7 @@ score_final=LR(score1,score2,score3)-score4 <br />
 
 # 冷启动结果
 采取以上冷启动策略之后，在线点击率为
-！[image](https://github.com/huaizepeng2020/Aminer-recommender-system-with-keywords/blob/main/figure/CTR_coldstart.png)
+![image](https://github.com/huaizepeng2020/Aminer-recommender-system-with-keywords/blob/main/figure/CTR_coldstart.png)
 
 在更改冷启动策略之后，冷启动点击率明显提升，与老用户接近。
 
