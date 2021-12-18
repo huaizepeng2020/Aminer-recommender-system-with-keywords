@@ -104,7 +104,10 @@ score_final=LR(score1,score2,score3)-score4 <br />
 3排序中引入impression discount
 
 # 冷启动结果
-将新老用户区分开，其点击率为
+采取以上冷启动策略之后，在线点击率为
+！[image](https://github.com/huaizepeng2020/Aminer-recommender-system-with-keywords/blob/main/figure/CTR_coldstart.png)
+
+在更改冷启动策略之后，冷启动点击率明显提升，与老用户接近。
 
 
 # 个人心得
